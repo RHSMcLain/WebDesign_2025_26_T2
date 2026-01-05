@@ -1,0 +1,39 @@
+body{
+    background: linear-gradient(
+        26deg, 
+        rgb(99, 158, 110), 
+        rgb(134, 133, 133), 
+        lightgrey
+    );
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+ul{
+    list-style-image: url('../images/tinyAsher.png');  
+}
+ol{
+    width: 180px;
+    list-style:upper-roman;
+    background-color: rgb(122, 122, 156);
+    
+}
+ol ol{
+    background-color: rgb(125, 125, 242);
+    width: 100px;
+    list-style: upper-alpha;
+    border-radius: 5px;
+}
+li:nth-child(even){
+    border-bottom: 1px solid red;
+}
+#stretch{
+    position: fixed;
+    top: 10px;
+    bottom: 40px;
+    left: 0px;
+    right: 10px;
+    background-color: rgb(161, 87, 87);
+    color: yellow;
+    padding: 5px;
+}

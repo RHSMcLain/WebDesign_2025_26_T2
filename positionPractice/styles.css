@@ -1,0 +1,41 @@
+body{
+    min-height: 4000px;
+}
+header{
+    font-size: 2rem;
+    color: white;
+    background-color: rgb(6, 96, 185);
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+article{
+    background-color: lightgrey;
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+
+}
+.p{
+    width: 100px;
+    height: 100px;
+    background-color: tan;
+    margin: 5px;
+
+}
+.me{
+    border: 5px solid forestgreen;
+    position: static;
+    right: 0px;
+    top: 0px;
+}
+.me img{
+    width: 80px;
+    left: 50%;
+    top: 25px;
+    position: absolute;
+    transition: all 0.1s;
+}
+.me img:hover{
+    width: 40px;
+}
