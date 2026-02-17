@@ -1,0 +1,75 @@
+header{
+    font-size: 1.5em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: blue;
+    background: linear-gradient(to right, rgb(150, 199, 215), rgb(215, 225, 228), rgb(150, 199, 215));
+    text-align: center;
+}
+main{
+    scroll-timeline: --main-timeline;
+    & div{
+        animation: background-animation linear;
+        
+        animation-timeline: scroll(nearest inline);
+        &::after{
+            animation: shape-animation linear;
+            animation-timeline: --main-timeline;
+        }
+    }
+}
+@layer animations{
+    @keyframes background-animation{
+        0%{
+            background: yellow
+        }
+        100%{
+            background: red;
+            
+        }
+    }
+    @keyframes shape-animation{
+        0%{
+            left: 0;
+            top: 0;
+            background-color: black;
+        }
+        50%{
+            top: calc(100% - var(--elsize));
+            left: calc(50% - var(--elsize));
+            background-color: red;
+        }
+        100%{
+            left: calc(100vw - var(--elsize));
+            top: 0;
+            rotate: 180deg;
+            background-color: white;
+        }
+    }
+}
+@layer page-setup{
+    :root{
+        --elsize: 50px;
+
+    }
+    main{
+        height: 90vh;
+        overflow: scroll;
+        border: 1px solid;
+        margin: 5vh auto;
+
+    }
+    div{
+        height: 400vh;
+        width: 400vw;
+        &::after{
+            content: "";
+            border: 4px solid red;
+            height: var(--elsize);
+            width: var(--elsize);
+            position: absolute;
+            border-radius: 20px;
+
+
+        }
+    }
+}

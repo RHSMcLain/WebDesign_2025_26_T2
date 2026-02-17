@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dialogPlay.css">
+</head>
+<body>
+    <header>
+        Dialog Play
+    </header>
+    <nav>
+        <a href=#>test</a>
+        <button commandFor="dialog" command="show" type="button">
+            open
+        </button>
+        <button commandFor = "dialog2" command="show-modal" type="button">show 2</button>
+    </nav>
+    <dialog id="dialog">
+        <button commandFor="dialog" command="close" type="button">Close</button>
+    </dialog>
+    <dialog id="dialog2">
+        <h1>Dialog 2</h1>
+        <button commandFor="dialog2" command="close">Close 2</button>
+    </dialog>
+
+</body>
+</html>

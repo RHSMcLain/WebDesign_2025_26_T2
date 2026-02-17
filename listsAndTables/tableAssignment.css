@@ -1,0 +1,110 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    font-size: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(95, 83, 83);
+    background: linear-gradient(90deg,rgba(207, 208, 209, 1) 0%, rgba(206, 219, 210, 1) 50%, rgba(232, 226, 200, 1) 100%);
+    text-align: center;
+}
+nav{
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+}
+nav ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    background: rgb(3, 40, 103);
+}
+nav > ul > li{
+    display: inline-block;
+    padding: 2px 3px;
+    background: silver;
+    color: black;
+    position: relative;
+    
+}
+nav > ul ul{
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    top: 0%;
+    transition: all 0.3s;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+nav li:hover{
+    background-color: rgb(113, 105, 91);
+    cursor: pointer;
+    color: white;
+}
+nav li:hover > ul{
+    opacity: 1;
+    top: 100%;
+    pointer-events: all;
+
+    
+}
+nav a:hover{
+    color: yellow;
+
+}
+article{
+    background-color: tan;
+}
+article h1{
+    text-align: center;
+}
+/*Table Styling */
+caption{
+    caption-side:bottom;
+    font-size: 0.8rem;
+    color: grey;
+    font-style: italic;
+}
+table{
+    border-collapse: collapse;
+    margin: 5px auto;
+    border: 2px solid maroon;
+
+}
+thead tr{
+    background: maroon;
+    color: white;
+}
+thead th{
+    writing-mode: vertical-rl;
+    transform: rotate(195deg);
+    font-weight: 100;
+    padding: 2px;
+    font-size: 0.5rem;
+    text-decoration: underline;
+    border: 1px solid black;
+}
+
+tbody tr:nth-child(odd){
+    background: radial-gradient(rgb(247, 234, 234) 40%, rgb(195, 179, 179));
+}
+tbody tr:hover{
+    background: rgb(158, 194, 158);
+}
+tbody td{
+    text-align: right;
+}
+tbody td:nth-child(1){
+    text-align: center;
+}
+tfoot{
+    border-top: 3px solid maroon;
+}
+
+td{
+    border: 1px solid lightgray;
+}

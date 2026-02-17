@@ -1,0 +1,26 @@
+main{
+ 
+    height: 400vh;
+    overflow-y: scroll;
+    scroll-timeline: --main-timeline;
+}
+img{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    animation: rollingCat linear;
+    animation-timeline: --main-timeline;
+
+}
+@keyframes rollingCat{
+    0%{
+        left: 10px;
+        top: 10px;
+        
+    }
+    100%{
+        left: 90vw;
+        top: 90vh;
+    }
+}

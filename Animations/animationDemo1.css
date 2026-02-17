@@ -1,0 +1,96 @@
+header{
+    background: linear-gradient(to left,dodgerblue, lightblue, dodgerblue);
+    font-size: 2em;
+    color: rgb(170, 111, 1);
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+nav{
+    position: relative;
+    background-color: rgb(147, 118, 165);
+    color: white;
+}
+
+isdfmg{
+    width: 100px;
+    border: 2px solid navy;
+    position: fixed;
+    left: 100px;
+    top: 100px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px grey;
+    transform: rotate(30deg);
+    animation-name: rollingCats;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+nav img{
+    width: 50px;
+    position: absolute;
+    right: 50%;
+
+}
+nav > a + img{
+    
+    display: block;
+}
+nav a:hover + img{
+    animation: newAnimation;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+.bouncingBall{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    background-color: rgb(0, 255, 89);
+    right: 10px;
+    top: 10px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 20px;
+    box-sizing: border-box;
+    vertical-align: middle;
+
+}
+nav a:hover + .bouncingBall{
+    animation: rollingCats 2s linear;
+}
+@keyframes newAnimation{
+    from{
+        transform: rotate(-10deg);
+        
+    }
+    to{
+        transform: rotate(10deg);
+    }
+}
+@keyframes rollingCats{
+    0%{
+        top: 10px;
+        left: 10px;
+        transform: scale(0.1);
+        border-color: white;
+    }
+    50%{
+        transform: scale(5);
+        left: 800px;
+        border-color: red;
+    }
+    90%{
+        top: 400px;
+        left: 400px;
+        transform: scale(1);
+        border-color: black;
+    }
+    100%{
+        left: 800px;
+        top: 200px;
+
+    }
+}

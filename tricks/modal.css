@@ -1,0 +1,61 @@
+.modal{
+    /* kick the checkboxes off the screen */
+    position: fixed;
+    left: -1000px;
+
+}
+.modal + div{
+    /* styles the outer div to cover the whole screen 
+        but it starts with no opacity and no pointer events */
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    opacity: 0;
+    background-color: rgba(0,0,0,0.75);
+    pointer-events: none;
+    transition: all 0.3s;
+}
+.modal + div div{
+    /* style the inner div to put it in the middle with a white background */
+    font-family: pirulen, cursive;
+    width: 50%;
+    position: fixed;
+    top: 100px;
+    height: 50%;
+    left: 25%;
+    background-color: white; 
+    border-radius: 10px;
+}
+.modal + div h1{
+    font-size: 1rem;
+}
+.modal + div article{
+    overflow-y: auto;
+}
+.modal:checked + div{
+    /* turns on the modal by giving it full opacity and all pointer events */
+    opacity: 1;
+    pointer-events: all;
+    
+}
+.xClose{
+    position: absolute;
+    top: -1px; 
+    right: -2px;
+    display: block;
+    background: black;
+    color: white;
+    border-radius: 50px;
+    padding: 1px 2px;
+    font-size: 0.8rem;
+}
+.xClose:hover{
+    box-shadow: 1px 1px rgb(214, 211, 211);
+    color: yellow;
+    cursor: pointer;
+}
+.xClose:active{
+    transform:scale(0.95);
+}

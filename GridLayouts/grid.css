@@ -1,0 +1,36 @@
+
+main{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50px auto 150px;
+    grid-template-rows: 50px auto 10vh;
+    column-gap: 5px;
+    row-gap: 5px;
+    grid-template-areas: "title title title"
+                        "sidebar . ."
+                        "sidebar . .";
+
+}
+.title{
+    grid-area: title;
+}
+.sidebar{
+    grid-area: sidebar;
+}
+div{
+   counter-increment: c 1;
+   border: 1px solid black;
+}
+.grid1{
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+.grid2{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+main div::after{
+    content: counter(c);
+}

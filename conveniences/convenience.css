@@ -1,0 +1,36 @@
+:root{
+    --primary-bg-color: rgb(87, 19, 124);
+    --primary-fg-color: chartreuse;
+    --highlight-color: magenta;
+    --grey: grey;
+    --heading-fonts: papyrus, cursive;
+}
+header{
+    font-size: 2em;
+    text-align: center;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-fg-color);
+    font-family: var(--heading-fonts);
+
+}
+nav{
+    width: 100px;
+    float: left;
+    min-height: 50vh;
+    border: 1px solid black;
+    background-color: var(--primary-bg-color);
+}
+nav a{
+    display: block;
+    margin: 5px 2px;
+    color: var(--primary-fg-color)
+}
+nav a:hover{
+    color: var(--highlight-color);
+}
+main{
+    margin-left: 105px;
+}
+dt{
+    font-family: var(--heading-fonts);
+}

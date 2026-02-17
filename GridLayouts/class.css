@@ -1,0 +1,41 @@
+body{
+    height: 100vh;
+}
+main{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50px 50px auto 150px;
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas: 
+        "gap gap gap login"
+        "sidebar sidebar content  content"
+        "footer footer menu  menu"
+        ;
+}
+div{
+    
+    border: 1px solid black;
+}
+div::after{
+    content: attr(id);
+}
+#menu{
+    grid-area: menu;
+
+}
+#gap{
+    grid-area: gap;
+}
+#login{
+    grid-area: login;
+
+}
+#sidebar{
+    grid-area: sidebar;
+}
+#content{
+    grid-area: content;
+}
+#footer{
+    grid-area: footer;
+}

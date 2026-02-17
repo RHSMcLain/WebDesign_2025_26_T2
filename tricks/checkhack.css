@@ -1,0 +1,60 @@
+header{
+    background: radial-gradient(rgb(23, 23, 110), rgb(105, 11, 105));
+    color: rgb(252, 136, 48);
+    padding: 3px;
+    text-align: center;
+    font-family: papyrus;
+    font-size: 2em;
+}
+main + div{
+    background-color: magenta;
+    width: 130px;
+    height: 130px;
+    box-shadow: 2px 2px grey;
+    clear: both;
+}
+
+.checkhack, .translator, .menuCheck{
+    position: fixed;
+    left: -1000px;
+}
+.checkhack + div{
+    border: 2px solid black;
+    height: fit-content;
+    width: fit-content;
+    margin: 5px auto;
+    transition: all 1.3s;
+}
+
+.checkhack:checked + div{
+    border-color: magenta;
+    
+}
+
+.translator + div{
+    font-size: 2em;
+    font-family: cursive;
+}
+.translator:checked + div{
+    font-family:'Times New Roman', Times, serif;
+}
+.menuCheck + nav{
+    border: 1px solid lightgrey;    
+    background-color: grey;
+    width: 100px;
+    overflow: hidden;
+    transition: all 0.2s;
+    float: left;
+    height: 400px;
+    
+    opacity: 0.8;
+}
+.menuCheck + nav a{
+    display: block;
+    text-decoration: none;
+    color: black;
+
+}
+.menuCheck:checked + nav{
+    width: 0px;
+}

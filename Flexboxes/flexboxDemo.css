@@ -1,0 +1,58 @@
+header{
+    font-size: 2em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: whitesmoke;
+    background-color: rgb(74, 3, 74);
+    text-align: center;
+
+}
+nav{
+    position: sticky;
+    top: 0px;
+    background-color: rgb(74, 3, 74);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.7rem;
+    text-align: center;
+}
+nav a{
+    color: whitesmoke;
+    text-decoration: none;
+    display: inline-block;
+    padding: 2px;
+    margin: 2px 5px;
+    transition: all 0.1s;
+}
+nav a:hover{
+    color: rgb(74,3,74);
+    background: whitesmoke;
+    transform:scale(1.05);
+    cursor: pointer;
+}
+nav a:active{
+    transform: scale(0.95);
+}
+main{
+    background-color: rgb(163, 33, 244);
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 10px;
+    column-gap: 5px;
+}
+main div{
+    background-color: whitesmoke;
+    margin: 2px;
+    border-radius: 5px;
+    min-height: 200px;
+    min-width: 200px;
+    flex: 1;
+}   
+#five{
+    background: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#five img{
+    width: 40px;
+}
